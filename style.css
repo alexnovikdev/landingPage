@@ -1,0 +1,542 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+/*input[type="text"], input[type="password"], textarea { padding: 0; 	}*/			/* убираем внутренние отступы для текстовых полей */
+
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #838383;
+  font-family: 'Lato', sans-serif;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #4bcaff;
+	text-decoration: underline;
+}
+a:hover {
+	color: #4bcaff;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #4bcaff;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+/* --------------- мои настройки ---------*/
+/*
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+.center-block {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+header {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	background: rgba(7, 7, 7, 0.3);
+}
+.head-trans {
+  padding: 0 150px;
+	box-sizing: border-box;
+}
+.head-trans img {
+  display: block;
+  float: left;
+  margin-top: 20px;
+}
+.head-trans nav {
+  float: right;
+}
+    .header-nav li {
+      float: left;
+      padding: 40px 0 40px 40px;
+    }
+    .header-nav li:first-child {
+      padding-left: 0;
+    }
+        .header-nav li a {
+          font-family: 'Droid Sans', sans-serif;
+          color: #fff;
+          font-weight: 700;
+          font-size: 0.8125em;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+        .header-nav li a:hover {
+          color: #4bcaff;
+        }
+.my-slider img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	border-bottom: 4px solid #4bcaff;
+}
+		.my-slider ul li {
+			position: relative;
+		}
+		.slide-text-wrap {
+			position: absolute;
+			top: 40%;
+			left: 44%;
+			max-width: 700px;
+		}
+		.my-slider ul li h2 {
+			font-size: 3em;
+			font-weight: 300;
+			color: #fff;
+			margin-bottom: 20px;
+		}
+				.my-slider ul li h2 span {
+					font-weight: 700;
+				}
+		.my-slider ul li p {
+			font-size: 1.125em;
+			font-weight: 300;
+			color: #fff;
+		}
+				a.slider-download {
+					display: inline-block;
+					margin-top: 30px;
+					text-decoration: none;
+					color: #fff;
+					font-size: 0.94em;
+					font-weight: 700;
+					text-transform: uppercase;
+					border: 2px solid #fff;
+					border-radius: 10px;
+					padding: 15px 40px
+				}
+				a.slider-download:hover {
+					color: #4bcaff;
+					border-color: #4bcaff;
+				}
+		.unslider-nav {
+			position: relative;
+			top: -40px;
+			max-width: 1480px;
+			margin: 0 auto;
+		}
+.features {
+	margin-bottom: 45px;
+	background: #f9f9f9;
+	padding: 45px 0 115px 0;
+	border-bottom: 1px solid #e7e7e7;
+	position: relative;
+	top: -20px;
+}
+.features-in {
+
+}
+		.features-in > h2 {
+			font-size: 2.25em;
+			font-weight: 900;
+			color: #414042;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+		.features-in > p {
+			font-size: 1.25em;
+			font-weight: 300;
+			color: #414042;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.features-wrapper {
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+		.feature-desc {
+			width: 27.3%;
+			float: left;
+			margin-left: 9%;
+		}
+		.feature-desc:first-child {
+			margin-left: 0;
+		}
+				.feature-desc > img {
+					display: block;
+					margin: 0 auto 25px auto;
+				}
+				.feature-desc > h3 a {
+					display: block;
+					font-size: 0.94em;
+					font-weight: 700;
+					color: #414042;
+					text-align: center;
+					margin-bottom: 25px;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+				.feature-desc > h3 a:hover {
+					text-decoration: underline;
+				}
+				.feature-desc > p {
+					font-size: 0.8125em;
+					text-align: center;
+				}
+.gallery {
+	margin-bottom: 115px;
+}
+.gallery-wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+		.gallery-wrapper > h2 {
+			font-size: 2.25em;
+			font-weight: 900;
+			color: #414042;
+			text-align: center;
+			margin-bottom: 5px;
+		}
+		.gallery-wrapper > p {
+			font-size: 1.25em;
+			font-weight: 300;
+			color: #414042;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.gallery-desc {
+			width: 23%;
+			float: left;
+			margin-left: 2.66%;
+		}
+		.gallery-desc:first-child {
+			margin-left: 0;
+		}
+		/*omg first-child dont work*/
+		#first {
+			margin-left: 0;
+		}
+				.gallery-desc > img {
+					display: block;
+					margin: 0 auto 25px auto;
+				}
+				.gallery-desc > p {
+					font-size: 0.8125em;
+					text-align: center;
+				}
+.video-section {
+	background: url(img/poster.jpg) center top no-repeat;
+	padding: 150px 0;
+	background-size: cover;
+}
+		.video-desc img {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 35px;
+			cursor: pointer;
+		}
+		.video-desc h2 {
+			font-size: 3em;
+			font-weight: 300;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 35px;
+		}
+				.video-desc h2 span {
+					font-weight: 700;
+				}
+		.video-desc p {
+			width: 45%;
+			margin: 0 auto;
+			font-size: 1.125em;
+			font-weight: 300;
+			color: #fff;
+		}
+.download {
+	background: #414042;
+	padding: 30px 0;
+}
+		.download > h2 {
+			font-weight: 700;
+			font-size: 3.4em;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 30px
+		}
+		.download > a {
+			display: table;
+			margin: 0 auto;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #414042;
+			background: #4bcaff;
+			padding: 20px 30px;
+			border-radius: 10px;
+			font-size: 0.94em;
+		}
+		.download > a:hover {
+			color: #fff;
+		}
+.contact {
+	position: relative;
+	height: 600px;
+}
+		.contact-sub-form {
+			position: absolute;
+			bottom: 50px;
+			width: 320px;
+			left: 50%;
+			margin-left: -160px;
+			background: rgba(75, 202, 255, 0.75);
+			border-radius: 5px;
+			padding: 30px 25px 15px 25px;
+			box-sizing: border-box;
+		}
+		.contact-sub-form h2 {
+			font-size: 2.25em;
+			color: #fff;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+				.contact-sub-form input[type = "text"], .contact-sub-form input[type = "email"] {
+					width: 100%;
+					border: none;
+					border-radius: 5px;
+					color: #d3d3d3;
+					font-size: 0.875em;
+					margin-bottom: 15px;
+					padding: 10px 0;
+					text-align: center;
+				}
+				.contact-sub-form textarea {
+					width: 100%;
+					border: none;
+					border-radius: 5px;
+					color: #d3d3d3;
+					font-size: 0.875em;
+					padding: 0;
+					text-align: center;
+					height: 150px;
+					margin-bottom: 20px;
+				}
+				.contact-sub-form input[type = "submit"] {
+					font-size: 0.94em;
+					font-weight: 700;
+					color: #4bcaff;
+					border: none;
+					background: #414042;
+					padding: 20px 80px;
+					border-radius: 5px;
+					display: table;
+					margin: 0 auto;
+				}
+				.contact-sub-form input[type = "submit"]:hover {
+					color: #fff;
+					cursor: pointer;
+				}
+.main-footer {
+	background: #414042;
+}
+.footer-wrapper {
+	padding: 50px 0;
+}
+.footer-wrapper p {
+	margin-left: 10.1%;
+	font-size: 0.75em;
+	color: #707071;
+}
+@media screen and (max-width: 1100px) {
+	.slide-text-wrap {
+		top: 30%;
+		left: 44%;
+		max-width: 700px;
+	}
+	.my-slider ul li h2 {
+		font-size: 2em;
+		margin-bottom: 20px;
+	}
+	.my-slider ul li p {
+		font-size: 1.125em;
+	}
+			a.slider-download {
+				margin-top: 30px;
+				padding: 10px 30px
+			}
+}
+@media screen and (max-width: 1050px) {
+	.head-trans img {
+	  float: none;
+		margin: 10px auto 0 auto;
+	}
+	.head-trans nav {
+	  float: none;
+	}
+	    .header-nav li {
+	      float: left;
+	      padding: 20px 0 20px 20px;
+	    }
+}
+@media screen and (max-width: 780px) {
+	.slide-text-wrap {
+		top: 30%;
+		left: 44%;
+		max-width: 700px;
+	}
+	.my-slider ul li h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+	.my-slider ul li p {
+		font-size: 0.8em;
+	}
+			a.slider-download {
+				margin-top: 20px;
+				padding: 5px 20px
+			}
+}
+@media screen and (max-width: 750px) {
+	    .header-nav li {
+	      float: left;
+	      padding: 10px 0 10px 10px;
+	    }
+			.head-trans {
+			  padding: 0 100px;
+				box-sizing: border-box;
+			}
+}
+
+@media screen and (max-width: 700px) {
+	.gallery-desc {
+		width: 48.67%;
+		margin-bottom: 30px;
+	}
+	#third {
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 620px) {
+	.feature-desc {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+}
+@media screen and (max-width: 600px) {
+	header {
+		position: static;
+		margin-top: -10px;
+		background: rgba(7, 7, 7, 1);
+	}
+	.head-trans {
+		padding: 0 50px;
+		box-sizing: border-box;
+	}
+	.slide-text-wrap {
+		top: 5%;
+		left: 44%;
+		max-width: 700px;
+	}
+	.my-slider ul li h2 {
+		font-size: 1.5em;
+		margin-bottom: 5px;
+	}
+	.my-slider ul li p {
+		font-size: 0.8em;
+	}
+			a.slider-download {
+				margin-top: 10px;
+				padding: 5px 20px
+			}
+}
+@media screen and (max-width: 500px) {
+	.gallery-desc {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 30px;
+	}
+	.video-desc p {
+		width: 90%;
+		text-align: center;
+	}
+	.slide-text-wrap {
+		top: 5%;
+		left: 0%;
+		max-width: 700px;
+	}
+	.my-slider ul li h2 {
+		font-size: 1em;
+		margin-bottom: 5px;
+	}
+	.my-slider ul li p {
+		font-size: 0.7em;
+	}
+			a.slider-download {
+				margin-top: 10px;
+				padding: 5px 20px
+			}
+}
